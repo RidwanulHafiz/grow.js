@@ -5,35 +5,59 @@ This is a javascript plugin to have the ability for a textarea to automatically 
 
 ### Installation
 
-#### Quick Start with GIT with [Documentation](https://github.com/RidwanulHafiz/vue-google-autocomplete-ridwan)
+##### Quick Start with GIT with [Documentation](https://github.com/RidwanulHafiz/grow.js)
 ```
-git clone https://github.com/RidwanulHafiz/vue-google-autocomplete-ridwan.git
+git clone https://github.com/RidwanulHafiz/grow.js.git
 ```
 
 
-#### Quick Start with NPM
-* Install with [NPM](https://www.npmjs.com/package/vue-google-autocomplete-ridwan) ```npm install vue-google-autocomplete-ridwan```
-* [Get an API Key from the Google API Console](https://developers.google.com/maps/documentation/javascript/get-api-key)
-* Include Google location script with Google API key
+##### Quick Start with NPM
+* Install with [NPM](https://www.npmjs.com/package/textarea-auto-grow-ridwan) ```npm install textarea-auto-grow-ridwan```
 
-```
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY=places"></script>
-```
 
 ### Usage
 
 HTML component
 ```
-<input type=text data-name="autocomplete"/>
+<textarea data-grow="auto"></textarea>
+```
+
+Import ```grow.js``` inside ```</head>``` section
+```
+<script src="/path/grow.js"></script>
+```
+
+
+Then call it when document is ready. It will automatically call with 
+default options when document is ready. 
+if you want to call it with custom option then call it after document ready.
+```
+document.addEventListener('DOMContentLoaded', function(){
+        var option = {
+            height : 100,
+            maxHeight : 500
+        };
+        AutoGrow.init(option);
+    }, false);
+```
+
+### Usage in Vue JS 2
+HTML component
+```
+<textarea data-grow="auto"></textarea>
 ```
 
 Import package into component
 ```
-import location from 'google-autocomplete-ridwan'
+import grow from 'textarea-auto-grow-ridwan'
 ```
 
 
-Then call it anywhere you need
+Then call it when component is ready.
 ```
-location.AutoComplete();
+var option = {
+    height : 100,
+    maxHeight : 500
+};
+grow.init(option);
 ```
