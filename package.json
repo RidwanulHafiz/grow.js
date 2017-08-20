@@ -1,0 +1,21 @@
+{
+  "name": "textarea-auto-grow-ridwan",
+  "version": "1.0.0",
+  "description": "This is a javascript plugin to have the ability for a textarea to automatically grow and shrink dynamically with its content.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "textarea",
+    "auto",
+    "grow",
+    "autogrow",
+    "auto",
+    "height",
+    "shrink",
+    "ridwan"
+  ],
+  "author": "Ridwanul Hafiz",
+  "license": "ISC"
+}
